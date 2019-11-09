@@ -9,9 +9,15 @@ def turtles
 end
 
 def turtle_traits(turtles)
+  newArray = []
   turtles.map do |turtle|
+    if turtle[:traits].instance_of? String
+      newArray.push(turtle[:traits])
+      p newArray
+    else
     turtle[:traits].each do |trait|
       trait
     end
+  end
   end
 end
